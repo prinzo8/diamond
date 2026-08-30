@@ -1,56 +1,79 @@
-# Zion Tattoo Family — Tema WordPress
+# Zion Tattoo — WordPress Theme
 
-**Zion Tattoo Family** es un tema clásico de WordPress, diseñado para un estudio de tatuaje y piercing de Tarragona. Su dirección visual, **Archivo Nocturno**, combina una base de tinta negra, el verde petróleo Tarraco y una composición editorial inspirada en la cultura del tattoo.
+A custom WordPress theme designed for a modern tattoo and piercing studio.
 
-> El tema no requiere Elementor, Divi, WPBakery, ACF ni ningún plugin obligatorio. Las entradas de **Artistas** y **Galería** se gestionan desde WordPress mediante tipos de contenido nativos.
+Zion Tattoo was built from scratch with a strong visual identity, responsive layouts, custom content management and subtle animations.
 
-## Instalación
+## Features
 
-En el panel de WordPress, abre **Apariencia → Temas → Añadir nuevo → Subir tema**. Selecciona el archivo `zion-tattoo-theme.zip`, pulsa **Instalar ahora** y, al finalizar, **Activar**. Para que la portada se muestre como una página estática, ve a **Ajustes → Lectura**, selecciona “Una página estática” y elige la página asignada a “Inicio”.
+- Custom WordPress theme built from scratch
+- Fully responsive design
+- Custom homepage
+- Hero section with configurable image
+- Tattoo and piercing services
+- Custom Artist post type
+- Custom Gallery post type
+- Artist profiles with images, biographies and specialties
+- Gallery managed directly from WordPress
+- Gallery lightbox
+- WhatsApp booking integration
+- Contact and location section
+- Google Maps integration
+- Instagram integration
+- Native WordPress Customizer
+- Responsive mobile navigation
+- Smooth reveal animations
+- Custom image sizes
+- Translation-ready
+- No Elementor, Divi, WPBakery or ACF required
 
-| Acción | Ruta en WordPress | Resultado |
-| --- | --- | --- |
-| Ajustar logo y datos del estudio | Apariencia → Personalizar → Zion Tattoo · Estudio | Modifica hero, contacto, reserva, horario, redes, Maps e imagen de portada. |
-| Definir el color petróleo | Apariencia → Personalizar → Colores | Sustituye el color principal de la identidad. |
-| Ajustar estilos de tatuaje | Apariencia → Personalizar → Zion Tattoo · Estudio | Edita la lista de estilos separándolos por comas. |
-| Crear artistas | Artistas → Añadir artista | Añade imagen, biografía, extracto, especialidades y perfil/Instagram. |
-| Crear una galería | Galería → Añadir pieza | Añade título e imagen destacada; la portada monta una rejilla y lightbox ligera. |
-| Configurar menús | Apariencia → Menús | Asigna los menús a “Menú principal” y “Menú del pie”. |
+## Screenshots
 
-## Personalización
+### Homepage
 
-Los textos principales, la URL de reserva, teléfono, correo electrónico, dirección, horario, Google Maps, Instagram e imagen hero se controlan desde el **Customizer nativo**. Los campos que no contienen datos reales conservan marcadores explícitos, como `[PHONE]`, `[EMAIL]` y `[BOOKING URL]`, para evitar inventar información comercial.
+![Zion Tattoo Homepage](screenshots/homepage.png)
 
-Para cambiar el texto fijo de la sección de estudio, piercing o los estilos de tatuaje, abre el archivo correspondiente en `template-parts/`. Cada archivo incluye un comentario que identifica su sección: `HERO SECTION`, `ABOUT SECTION`, `SERVICES SECTION`, `ARTISTS SECTION`, `GALLERY SECTION`, `BOOKING SECTION` o `LOCATION SECTION`.
+### Gallery
 
-## Imágenes
+![Zion Tattoo Gallery](screenshots/gallery.png)
 
-La portada muestra inicialmente una fotografía original incluida en `assets/images/zion-hero-studio.jpg`; se sustituye desde **Apariencia → Personalizar → Zion Tattoo · Estudio → Imagen del hero**. Para artistas y galería, usa la **imagen destacada** de cada entrada. El tema incluye un marcador SVG original en `assets/images/studio-placeholder.svg`, utilizado solo cuando aún no se ha cargado una imagen. Así, todas las imágenes pueden sustituirse mediante la biblioteca de medios sin editar plantillas.
+### Contact
 
-## Estructura de archivos
+![Zion Tattoo Contact](screenshots/contact.png)
 
-| Archivo o carpeta | Función |
-| --- | --- |
-| `functions.php` | Punto de entrada: incluye configuración, recursos, Customizer y helpers. |
-| `style.css` | Cabecera de metadatos reconocida por WordPress. |
-| `theme.json` | Paleta y tipografías disponibles para el editor moderno de WordPress. |
-| `header.php` / `footer.php` | Cabecera sticky, menú, CTA de reserva y pie del sitio. |
-| `front-page.php` | Ensambla la página de inicio completa. |
-| `page.php`, `single.php`, `archive.php`, `search.php`, `index.php`, `404.php` | Plantillas de contenido y archivos estándar. |
-| `template-parts/` | Secciones independientes y comentadas de la home. |
-| `inc/setup.php` | Soportes del tema, menús, tamaños de imagen, tipos de contenido y campos de artista. |
-| `inc/enqueue.php` | Carga ordenada de CSS y JavaScript mediante las APIs WordPress. |
-| `inc/customizer.php` | Opciones editables y sanitizadas del Customizer. |
-| `inc/template-functions.php` | Helpers reutilizables y fallback del menú. |
-| `assets/css/main.css` | Diseño responsive del tema. |
-| `assets/js/main.js` | Menú móvil, efectos reveal y lightbox sin librerías externas. |
+### Mobile
 
-## Desarrollo y buenas prácticas
+![Zion Tattoo Mobile](screenshots/mobile.png)
 
-El estilo público está en `assets/css/main.css`; el editor utiliza `assets/css/editor.css`. El JavaScript se mantiene deliberadamente pequeño y sin dependencias: respeta `prefers-reduced-motion`, usa `IntersectionObserver` para apariciones al hacer scroll y un `<dialog>` nativo para la galería.
+### Mobile Menu
 
-La salida de datos de WordPress utiliza funciones de escape según su contexto, incluidos `esc_html()`, `esc_attr()`, `esc_url()` y `wp_kses_post()`. Las fichas de artista se guardan con nonce, comprobación de capacidad y sanitización. El tema está preparado para traducción con el dominio de texto `zion-tattoo` y es compatible con PHP 8.x y versiones recientes de WordPress.
+![Zion Tattoo Mobile Menu](screenshots/menu.png)
 
-## Antes de publicar
+## WordPress Integration
 
-Sustituye todos los marcadores entre corchetes, carga imágenes reales optimizadas, asigna ambos menús, configura la página de inicio estática y revisa los enlaces de reserva, mapa y redes. Después, recorre el sitio en móvil y escritorio para confirmar el contenido definitivo.
+The theme uses native WordPress functionality instead of external page builders.
+
+Artists and gallery content are managed through custom WordPress post types.
+
+The WordPress Customizer is used to manage studio information, contact details, booking information, social links, images and other website settings.
+
+## Technologies
+
+- WordPress
+- PHP
+- HTML5
+- CSS3
+- JavaScript
+- WordPress Customizer
+- Native WordPress APIs
+- Responsive Web Design
+
+## Development
+
+Zion Tattoo was developed as a custom WordPress project for a tattoo and piercing studio.
+
+The project combines custom PHP templates, responsive CSS, JavaScript interactions and native WordPress content management.
+
+## License
+
+This project is provided for portfolio and development purposes.
