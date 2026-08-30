@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Local/development files
+*.log
+*.sql
+*.backup
+*.bak
+
+# Environment / secrets
+.env
+.env.*
+!.env.example

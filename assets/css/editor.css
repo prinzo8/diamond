@@ -1,0 +1,5 @@
+/* Archivo Nocturno: cohérence minimale de l’éditeur WordPress avec le thème public. */
+body { background: #0c0d0d; color: #f1e9da; font-family: Manrope, sans-serif; }
+h1, h2, h3 { color: #f1e9da; font-family: 'Bebas Neue', sans-serif; letter-spacing: .05em; }
+a { color: #b29a5e; }
+
