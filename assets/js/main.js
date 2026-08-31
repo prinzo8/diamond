@@ -53,6 +53,9 @@
       if (!dialog || !dialogImage || !trigger.dataset.lightboxSrc) return;
       dialogImage.src = trigger.dataset.lightboxSrc;
       dialogImage.alt = trigger.dataset.lightboxAlt || '';
+
+      // Move the custom cursor into the dialog BEFORE opening it.
+      moveCursorIntoDialog(dialog);
       dialog.showModal();
     });
   });
@@ -63,6 +66,7 @@
     });
     dialog.addEventListener('close', () => {
       if (dialogImage) dialogImage.src = '';
+      restoreCursorFromDialog();
     });
   }
 }());

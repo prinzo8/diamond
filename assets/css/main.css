@@ -721,3 +721,19 @@ h3 { font-size: 2.15rem; line-height: .95; }
 		gap: .8rem 1.2rem;
 	}
 }
+
+/* Fix: keep custom cursor visible above the gallery lightbox */
+dialog.lightbox {
+    cursor: none !important;
+}
+
+dialog.lightbox *,
+dialog.lightbox::backdrop {
+    cursor: none !important;
+}
+
+.zion-cursor-dot,
+.zion-cursor-ring {
+    z-index: 2147483647 !important;
+    pointer-events: none !important;
+}
